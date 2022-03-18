@@ -68,6 +68,3 @@ const spiralJS = {
 		}
 	}
 }
-
-
-spiralJS.init(document.getElementById('spiralCanvas'));
