@@ -1,0 +1,204 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+
+:root {
+  --white: #FEFEFE;
+  --primary-darkest: #4429CC;
+  --primary-dark: #4D2EE5;
+  --primary-base: #5533FF;
+  --primary-light: #8066FF;
+  --primary-lightest: #AA99FF;
+
+  --info-darkest: #268CCC;
+  --info-dark: #2B9DE5;
+  --info-base: #30AFFF;
+  --info-light: #61C2FF;
+  --info-lightest: #94D6FF;
+
+  --error-darkest: #CC2D52;
+  --error-dark: #E5325D;
+  --error-base: #FF3867;
+  --error-light: #FF6B8E;
+  --error-lightest: #FF9EB5;
+
+  --success-darkest: #19B074;
+  --success-dark: #1DC985;
+  --success-base: #21E496;
+  --success-light: #4EE9AB;
+  --success-lightest: #7BEFC1;
+
+  --warning-darkest: #CC9532;
+  --warning-dark: #E5A739;
+  --warning-base: #FFBA3F;
+  --warning-light: #FFCC70;
+  --warning-lightest: #FFDEA3;
+
+  --black-darkest: #000000;
+  --black-dark: #060317;
+  --black-base: #060024;
+  --black-light: #080030;
+  --black-lightest: #0A003D;
+
+  --light_gray-darkest: #DAE7F1;
+  --light_gray-dark: #E1ECF4;
+  --light_gray-base: #E9F1F7;
+  --light_gray-light: #F0F6F9;
+  --light_gray-lightest: #F7FAFC;
+
+  --dark_gray-darkest: #193143;
+  --dark_gray-dark: #21425A;
+  --dark_gray-base: #295270;
+  --dark_gray-light: #316286;
+  --dark_gray-lightest: #39739D;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--black-lightest);
+  background: var(--white);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  overflow-x: hidden;
+}
+
+
+h1, h2, h3, h4 {
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+	font-weight: 700;
+	line-height: 1.15;
+}
+
+h1 { font-size: calc(1.375rem + 1.2vw); }
+h2 { font-size: calc(1.325rem + 0.9vw); }
+h3 { font-size: calc(1.325rem + 0.6vw); }
+h4 { font-size: calc(1.325rem + 0.3vw); }
+
+.container {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.button {
+	width: auto;
+	height: 36px;
+	min-width: 120px;
+	font-size: 14px;
+  font-weight: 300;
+  line-height: 36px;
+  text-align: center;
+  text-decoration: none;
+  background: var(--primary-base);
+  color: var(--light_gray-light);
+  border-radius: 2px;
+  padding: 0 16px;
+}
+
+.button:hover { background:  var(--primary-lightest); }
+
+.header {
+	width: 100%;
+	heihgt: 56px;
+	background: var(--light_gray-lightest);
+	position: fixed;
+	z-index: 999;
+	filter: drop-shadow(0px 1px 2px rgba(6, 0, 36, 0.25));
+}
+
+.header__container {
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logotype img {
+	width: 24px;
+	height: 24px;
+}
+
+.header__button { background: var(--black-darkest); }
+.header__button:hover { background: var(--black-lightest); }
+
+.first-screen {
+	width: 100vw;
+	height: 100vh;
+	background: var(--black-darkest);
+	position: relative;
+	margin-bottom: 160px;
+}
+
+.first-screen__block {
+   color: var(--light_gray-darkest);
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   margin-right: -50%;
+   transform: translate(-50%, -50%);
+}
+
+.content {
+	width: 100%;
+	height: auto;
+}
+
+.content p {
+	width: auto;
+	max-width: 552px;
+}
+
+.content h1, h2, h3, h4 { width: 100%; }
+.content pre { background: transparent; }
+.content code { background: var(--light_gray-light); }
+
+.footer {
+	width: 100vw;
+	height: auto;
+	min-height: 96px;
+	background: var(--light_gray-lightest);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer a {
+	display: flex;
+	align-items: center;
+	color: var(--dark_gray-lightest);
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+.footer a:hover { color: var(--primary-darkest); }
+.footer img { padding-right: 32px; }
+
+@media(min-width: 1200px) {
+  .container { width: 1170px; }
+}
+
+@media(min-width: 768px) and (max-width: 1199.98px) {
+  .container { width: 740px; }
+}
+
+@media(max-width: 767.98px) {
+  .container { padding: 0 24px; }
+  .first-screen__block { max-width: 240px; }
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.75rem; }
+  h4 { font-size: 1.5rem; }
+}

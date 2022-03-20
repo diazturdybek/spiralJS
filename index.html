@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SPIRAL JS</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+	<link rel="manifest" href="assets/img/site.webmanifest">
+	<link rel="mask-icon" href="assets/img/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="assets/img/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="assets/img/browserconfig.xml">
+	<meta name="theme-color" content="#fefefe">
+
+	<link rel="stylesheet" type="text/css" href="assets/index.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/default.min.css">
+</head>
+<body>
+
+	<header class="header">
+		<div class="header__container container">
+			<a href="#" class="header__logotype">
+				<img src="assets/img/favicon.ico" alt="Logotype">
+			</a>
+			<a target="_blank" href="https://github.com/diazturdybek/spiralJS" class="header__button button">Github</a>
+		</div>
+	</header>
+
+	<div class="first-screen">
+		<canvas id="firstScreenCanvas"></canvas>
+		<div class="first-screen__block">
+			<h1> SpiralJS - can help create beautiful spiral animation! </h1>
+		</div>
+	</div>
+
+	<div class="content container">
+		<h2>Documentation</h2>
+		<p>
+			Copy-paste the &lt;script&gt; into your &lt;body&gt; end, before all other scripts to load our library. 
+			Also create a &lt;div&gt; element inside which &lt;canvas&gt; element.
+			&lt;canvas&gt; will take the size of the parent, so to avoid bugs, you need to set the canvas-wrapper style to { position: relative; }
+		</p>
+		<pre rel="js">
+			<code class="language-html" data-lang="html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+	&lt;title&gt;Document&lt;/title&gt;
+	&lt;style type="text/css"&gt;
+		.canvas-wrapper {
+			position: relative;
+			width: 100vw;
+			height: 100vh;
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;div class="canvas-wrapper"&gt;
+		&lt;canvas id="spiralCanvas"&gt;&lt;/canvas&gt;
+	&lt;/div&gt;
+	&lt;!-- Require library --&gt;
+	&lt;script src="path/to/spiral.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+			</code>
+		</pre>
+
+		<h2>Initialization</h2>
+		<p>
+			Paste the spiralJS.init(target, [options]); into your script.
+		</p>
+		<pre rel="js">
+			<code class="language-js" data-lang="js">
+				spiralJS.init(document.getElementById('spiralCanvas'), [ config array, optional]);
+			</code>
+		</pre>
+
+		<h3> Options </h3>
+		<pre>
+[lineSize] - sets line size
+[lineColor] - sets line color
+[angle] - sets the angle, which adjusts the distance between the lines
+[anglePitch] - sets the distance between pixels, The closer to zero, the more it looks like a spiral.
+[FPS] - sets framerate
+[background] - sets background color
+[rotatePitch] - sets rotate speed
+		</pre>
+	</div>
+
+
+	<footer class="footer">
+		<a target="_blank" href="https://www.instagram.com/dias_turdybek">
+			<img src="assets/instagram.png" alt="instagram icon">
+			Dias Turdybek
+		</a>
+	</footer>
+
+	<!-- ENDLESS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+	<script src="spiral.js"></script>
+	<script type="text/javascript">
+		spiralJS.init(document.getElementById('firstScreenCanvas'), {
+			background: '#000000',
+			lineColor: '#521221',
+			lineSize: 3,
+			rotatePitch: 0.01,
+		});
+
+		hljs.highlightAll();
+	</script>
+</body>
+</html>
