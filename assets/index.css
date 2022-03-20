@@ -112,7 +112,7 @@ h4 { font-size: calc(1.325rem + 0.3vw); }
 .button:hover { background:  var(--primary-lightest); }
 
 .header {
-	width: 100%;
+	width: 100vw;
 	heihgt: 56px;
 	background: var(--light_gray-lightest);
 	position: fixed;
