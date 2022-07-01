@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Simple JavaScript library for drawing amazing spiral animation using canvas!">
+	<meta name="author" content="Diaz Turdybek ( diaz.turdybek@mail.ru )">
+	<title>SpiralJS | Examples</title>
+
+	<!-- FAVICONS -->
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+	<link rel="manifest" href="assets/img/favicons/site.webmanifest">
+	<link rel="mask-icon" href="assets/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="assets/img/favicons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="assets/img/favicons/browserconfig.xml">
+	<meta name="theme-color" content="#fefefe">
+
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+</head>
+<body>
+
+	<header id="header" class="header header_hidden">
+		<div class="header__brand">
+			<img class="header__brand-logo" src="assets/img/favicons/favicon-32x32.png" alt="logotype">
+			<span class="header__brand-name">SpiralJS</span>
+		</div>
+
+		<div class="header__toggler">
+			<span id="headerToggler" class="header__toggler-icon"></span>
+		</div>
+
+		<ul class="navigation">
+			<li id="docsItem" class="navigation__item">
+				<a id="docsToggler" class="navigation__item-link" href="#">
+					<img class="navigation__item-icon" src="assets/img/icons/docs.svg" alt="documentation">
+					<span class="navigation__item-name">Documentation</span>
+					<span class="navigation__item-toggler"></span>
+				</a>
+
+				<div class="navigation__links">
+					<a href="#" class="navigation__links-link">link 1</a>
+					<a href="#" class="navigation__links-link">link 2</a>
+					<a href="#" class="navigation__links-link">link 3</a>
+					<a href="#" class="navigation__links-link">link 4</a>
+					<a href="#" class="navigation__links-link">link 5</a>
+				</div>
+			</li>
+
+			<li class="navigation__item navigation__item_current">
+				<a class="navigation__item-link" href="#">
+					<img class="navigation__item-icon" src="assets/img/icons/examples.svg" alt="examples">
+					<span class="navigation__item-name">Examples</span>
+				</a>
+			</li>
+		</ul>
+	</header>
+
+	<div class="canvas-wrapper">
+		<canvas id="canvas"></canvas>
+
+		<div class="canvas-interface">
+			<img class="canvas-interface__button" src="assets/img/icons/arrow_left.svg" alt="button">
+			<span class="canvas-interface__text">Default style</span>
+			<img class="canvas-interface__button" src="assets/img/icons/arrow_right.svg" alt="button">
+		</div>
+	</div>
+
+	
+	<!-- Scripts -->
+	<script type="text/javascript" src="spiral.js"></script>
+	<script type="text/javascript" src="examples_list.js"></script>
+	<script type="text/javascript" src="assets/js/examples.js"></script>
+</body>
+</html>
